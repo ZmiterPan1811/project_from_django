@@ -1,0 +1,191 @@
+html, body {
+	font-family: 'Cinzel';
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	color: #444;
+}
+
+a {
+	color: dimgray;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#;
+	text-decoration: underline;
+}
+
+p.link-read-post {
+	text-align: right;
+}
+
+p.link-read-post a {
+	padding: 10px;
+	min-width: 100px;
+	background: #537072;
+	color: #fff;
+	border: 1px solid dimgray;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+/* отображение категории и даты */
+div.article-panel {
+    background: whitesmoke;
+    padding: 5px 10px 5px 10px;
+	margin: 50px 0 15px 0;
+	box-sizing: border-box;
+	border: 1px solid dimgray;
+	border-radius: 3px;
+    overflow: hidden; - /* заполнение пространства */
+    color: #555;
+}
+
+div.article-panel p.first {
+    margin: 0;
+    float: left;
+}
+
+div.article-panel p.last {
+    margin: 0;
+    float: right;
+}
+
+ul.list-articles {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.mainmenu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	color: darkorange;
+	font-size: 20px;
+	overflow: hidden;
+}
+
+ul.mainmenu li {
+	float: left;
+	margin: 18px 40px 0 30px;
+}
+
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a {
+	color: darkorange;
+	text-decoration: none;
+}
+
+ul.mainmenu li a:hover {
+	color: #FDA83D;
+}
+
+.table-content {
+	width: 100%;
+	min-height: 100%;
+	height: 100%;
+}
+
+.left-chapters {
+	margin: 0;
+	background: whitesmoke; /* цвет сайтбара */
+	min-height: 100%;
+}
+/* стили надписей Категории. можно всунуть и расположение в сайтбаре */
+.left-chapters ul {
+	width: 230px;
+	min-height: 100%;
+	padding: 20px 20px 10px 20px;
+	list-style: none;
+	font-size: 20px;
+}
+
+.left-chapters ul li {
+	margin: 20px 0 0 0;
+	color: #999;
+}
+
+img.img-article-left {
+	max-width: 300px;
+	height: auto;
+	float: inherit;
+	padding: 0 10px 10px 0;
+}
+
+img.img-article-post {
+	max-width: 700px;
+	height: auto;
+	padding: 10px 10px 10px 10px;
+}
+
+.content {
+	padding: 40px 0 20px 40px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.form-input {
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
+}
+
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+.list-pages ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-pages ul li {
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
+
+.list-pages a {
+	color: #000;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 44px;
+	height: 30px;
+	padding: 1px 0 0 0;
+	border: 1px solid whitesmoke;
+	border-radius: 30px;
+}
+
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	padding: 1px 0 0 0;
+	font-size: 15px;
+}
+
+ul.content-table li a:hover {color: #F0711C;}
+
+.read-post {
+	text-align: center;
+ }
