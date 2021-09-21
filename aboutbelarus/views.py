@@ -9,6 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.decorators.cache import cache_page
 from django.db.models import Q
 
+
 from .models import *
 from .forms import *
 from .utils import *
@@ -40,13 +41,17 @@ class ContactFormView(DataMixin, FormView):
     template_name = 'aboutbelarus/contact.html'
     success_url = reverse_lazy('home')
 
-    def get_context_data(self, *, object_list=None, **kwargs):
+    def get_context_data(self, *args, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         c_def = self.get_user_context(title="Обратная")
         return dict(list(context.items()) + list(c_def.items()))
 
     def form_valid(self, form):
-        print(form.cleaned_data)
+        name = form.cleaned_data['name']
+        email = form.cleaned_data['email']
+        message = form.cleaned_data['message']
+        new_form = UserSendMessage(name=name, email=email, message=message)
+        new_form.save()
         return redirect('home')
 
 
@@ -115,6 +120,7 @@ class RegisterUser(DataMixin, CreateView):
         return redirect('home')
 
 
+
 class LoginUser(DataMixin, LoginView):
     form_class = LoginUserForm
     template_name = 'aboutbelarus/login.html'
@@ -131,8 +137,6 @@ class LoginUser(DataMixin, LoginView):
 def pageNotFound(request, exeption):
     return HttpResponseNotFound('<h1>Страница не найдена.</h1>')
 
-# def pageNotFound(request, exeption):
-#    return HttpResponseNotFound('<h1>Страница не найдена.</h1>')
 
 def logout_user(request):
     logout(request)
