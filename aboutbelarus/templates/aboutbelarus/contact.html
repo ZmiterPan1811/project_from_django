@@ -1,19 +1,35 @@
 {% extends 'aboutbelarus/base.html' %}
 
 {% block content %}
-<h1>{{title}}</h1>
-<p><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab7ec510c6842103ee9396c32125d57f2dc207134c7e87fe6f3d04c0602d02d99&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script></p>
-<form method="post">
-{% csrf_token %}
 
-    <div class="form-error">{{ form.non_field_errors }}</div>
+    <h1>{{ title }}</h1>
+    </br>
 
-{% for f in form %}
-<p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>
-<div class="form-error">{{ f.errors }}</div>
-{% endfor %}
+    <h4>Пантеев Дмитрий</h4>
+    <h4>Тел.: +375 29 3122925 (Viber, Telegram)</h4>
+    <h4>Email: panteev1986@gmail.com</h4>
+    </br>
 
-    <button type="submit" class="btn btn-outline-secondary">Отправить</button>
-</form>
+    <p>
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab7ec510c6842103ee9396c32125d57f2dc207134c7e87fe6f3d04c0602d02d99&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    </p>
+    <br>
+
+    <h4>Оставить сообщение</h4>
+    <br>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-error">{{ form.non_field_errors }}</div>
+
+        {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-outline-secondary">Отправить</button>
+    </form>
 
 {% endblock %}

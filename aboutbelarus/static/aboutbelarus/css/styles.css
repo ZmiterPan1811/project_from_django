@@ -96,7 +96,7 @@ ul.mainmenu li a:hover {
 	background: whitesmoke; /* цвет сайтбара */
 	min-height: 100%;
 }
-/* стили надписей Категории. можно всунуть и расположение в сайтбаре */
+/* стили надписей Категории */
 .left-chapters ul {
 	width: 230px;
 	min-height: 100%;

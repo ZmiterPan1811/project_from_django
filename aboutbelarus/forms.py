@@ -29,12 +29,3 @@ class ContactForm(forms.Form):
     email = forms.EmailField(label='Email')
     message = forms.CharField(label='Сообщение', widget=forms.Textarea(attrs={'cols': 60, 'rows': 10}))
     captcha = CaptchaField(label='Введите текст')
-
-
-
-
-
-
-
-
-

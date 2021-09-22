@@ -2,9 +2,8 @@ from django.contrib import admin
 from django.conf.urls.static import static
 
 from my_Belarus import settings
-from aboutbelarus.views import*
+from aboutbelarus.views import *
 from django.urls import path, include
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),

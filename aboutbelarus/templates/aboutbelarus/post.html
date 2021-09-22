@@ -3,17 +3,17 @@
 {% block content %}
 
     {% if post.photo %}
-    <p class="read-post"><img class="img-article-post" src="{{post.photo.url}}"></p>
+        <p class="read-post"><img class="img-article-post" src="{{ post.photo.url }}"></p>
     {% endif %}
 
-    <h1 class="read-post">{{post.title}}</h1>
+    <h1 class="read-post">{{ post.title }}</h1>
 
     <div style="text-align: justify">
-    <p>{{post.content|linebreaks}}</p>
+        <p>{{ post.content|linebreaks }}</p>
     </div>
 
     {% autoescape off %}
-    <p>{{post.map}}</p>
+        <p>{{ post.map }}</p>
     {% endautoescape %}
 
 {% endblock %}

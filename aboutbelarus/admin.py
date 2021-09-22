@@ -27,3 +27,6 @@ class UserSendMessageAdmin(admin.ModelAdmin):
 admin.site.register(AboutBelarus, AboutBelarusAdmin)
 admin.site.register(UserSendMessage, UserSendMessageAdmin)
 admin.site.register(Category, CategoryAdmin)
+
+admin.site.site_title = 'Админ-панель сайта об интересных местах в Беларуси'
+admin.site.site_header = 'Админ-панель сайта об интересных местах в Беларуси'

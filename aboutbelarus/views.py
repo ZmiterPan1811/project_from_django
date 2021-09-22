@@ -9,7 +9,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.decorators.cache import cache_page
 from django.db.models import Q
 
-
 from .models import *
 from .forms import *
 from .utils import *
@@ -43,7 +42,7 @@ class ContactFormView(DataMixin, FormView):
 
     def get_context_data(self, *args, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        c_def = self.get_user_context(title="Обратная")
+        c_def = self.get_user_context(title="Контакты")
         return dict(list(context.items()) + list(c_def.items()))
 
     def form_valid(self, form):
@@ -120,7 +119,6 @@ class RegisterUser(DataMixin, CreateView):
         return redirect('home')
 
 
-
 class LoginUser(DataMixin, LoginView):
     form_class = LoginUserForm
     template_name = 'aboutbelarus/login.html'
@@ -141,5 +139,3 @@ def pageNotFound(request, exeption):
 def logout_user(request):
     logout(request)
     return redirect('login')
-
-
